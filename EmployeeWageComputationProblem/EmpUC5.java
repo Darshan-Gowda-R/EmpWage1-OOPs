@@ -7,12 +7,15 @@ public class EmpUC2{
 	public static final int EMP_ABSENT = 0;
 	public static final int EMP_PART_TIME= 1;
 	public static final int DAYS = 20;
+	public static final int TOTAL_HOURS = 100;
+
 
 	public static void main(String[] args){
 
 
 		int  total=0;
-		for(int i=0 ; i <= DAYS ; i++){
+		int  hours=0;
+		for(int i=0 ; ( i <= DAYS && hours <= TOTAL_HOURS ) ; i++){
 
 			int empCheck=(int)Math.floor(Math.random()*10)%3;
 
@@ -20,15 +23,17 @@ public class EmpUC2{
 
 				case EMP_PRESENT:
 					total += EMP_WAGE_PER_HOUR*EMP_DAY_WORK;
-
+					hours += EMP_DAY_WORK;
 					break;
 				case EMP_PART_TIME:
 					total += EMP_WAGE_PER_HOUR*EMP_PART_TIME_WORK;
-
+					hours += EMP_PART_TIME_WORK;
 					break;
 				default :
 
 			}
+
+
 		}
 		System.out.println("The Total Wage earned by Employee : "+ total);
 	}
