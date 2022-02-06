@@ -15,7 +15,7 @@ public class EmpUC2{
 
 		int  total=0;
 		int  hours=0;
-		for(int i=0 ; ( i <= DAYS && hours <= TOTAL_HOURS ) ; i++){
+		for(int i=0 ; i <= DAYS ; i++){
 
 			int empCheck=(int)Math.floor(Math.random()*10)%3;
 
